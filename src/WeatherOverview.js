@@ -8,6 +8,7 @@ export default function WeatherOverview(props) {
       <h1>{props.data.city}</h1>
       <ul>
         <li>
+          <span className="LocalTime">Local Time: </span>{" "}
           <FormatDate date={props.data.date} />
         </li>
         <li className="text-capitalize">{props.data.description}</li>
@@ -31,6 +32,9 @@ export default function WeatherOverview(props) {
           </ul>
         </div>
       </div>
+      <footer className="LastUpdate">
+        Last Updated: <FormatDate date={props.data.date} />
+      </footer>
     </div>
   );
 }
