@@ -7,48 +7,7 @@
   border-radius: 10px;
 }
 
-.Weather h1 {
-  color: #7c7c7c;
-  font-size: 24px;
-  font-weight: 100;
-  line-height: 28px;
-  margin-top: 25px;
-}
-
-.Weather ul {
-  margin: 0 0 18px;
-  padding: 0;
-}
-
-.Weather li {
-  list-style: none;
-  color: #7c7c7c;
-  font-size: 16px;
-  font-weight: 100;
-  line-height: 19px;
-}
-
-.Weather img {
-  height: 64px;
-  width: 64px;
-  margin-bottom: 30px;
-}
-.Weather .WeatherTemperature {
-  width: 80px;
-}
-
-.Weather .temperature {
-  color: rgb(33, 33, 33);
-  font-size: 64px;
-  font-weight: 400;
-  line-height: 1;
-}
-.Weather .unit {
-  position: relative;
-  top: -34px;
-  font-size: 18px;
-}
-
-.Weather .LastUpdate {
-  left: 30px;
+.Weather .btn-outline-secondary {
+  color: #abacad;
+  border-color: #abacad;
 }

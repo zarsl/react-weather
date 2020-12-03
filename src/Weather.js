@@ -39,13 +39,13 @@ export default function Weather(props) {
   if (forecast.ready) {
     return (
       <div className="Weather">
-        <form onSubmit={handleSubmit}>
+        <form>
           <div className="row">
-            <div className="col-9">
+            <div className="col-7">
               <input
                 type="search"
                 placeholder="Enter a city..."
-                className="form-control"
+                className="form-control InputField"
                 autoFocus="on"
                 onChange={updateCity}
               />
@@ -54,8 +54,19 @@ export default function Weather(props) {
               <input
                 type="submit"
                 value="Search"
-                className="btn btn-primary w-100"
+                className="btn btn-primary SearchButton"
+                onSubmit={handleSubmit}
               />
+            </div>
+            <div className="col-2">
+              <input
+                type="submit"
+                value="📌"
+                className="form-control btn btn-outline-secondary CurrentLocation"
+                data-toggle="tooltip"
+                data-placement="bottom"
+                title="Search by current location"
+              ></input>
             </div>
           </div>
         </form>
@@ -67,3 +78,6 @@ export default function Weather(props) {
     return "Loading...";
   }
 }
+
+//todo:
+//add current location search capability
