@@ -6,6 +6,9 @@ import "./Weather.css";
 export default function Weather(props) {
   let [city, setCity] = useState(props.defaultCity);
   let [forecast, setForecast] = useState({ ready: false });
+  const apiKey = "4fb8f394cc5f2d439df6249cf258d6a4";
+  let apiUrl = null;
+  let units = "metric";
 
   function handleResponse(response) {
     setForecast({
@@ -21,10 +24,18 @@ export default function Weather(props) {
   }
 
   function search() {
-    const apiKey = "4fb8f394cc5f2d439df6249cf258d6a4";
-    let units = "metric";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+    apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(handleResponse);
+  }
+
+  function searchLocation(position) {
+    apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function handleCurrentLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(searchLocation);
   }
 
   function handleSubmit(event) {
@@ -39,33 +50,29 @@ export default function Weather(props) {
   if (forecast.ready) {
     return (
       <div className="Weather">
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-7">
               <input
                 type="search"
                 placeholder="Enter a city..."
-                className="form-control InputField"
+                className="form-control"
                 autoFocus="on"
                 onChange={updateCity}
               />
             </div>
             <div className="col-3">
-              <input
-                type="submit"
-                value="Search"
-                className="btn btn-primary SearchButton"
-                onSubmit={handleSubmit}
-              />
+              <input type="submit" value="Search" className="btn btn-primary" />
             </div>
             <div className="col-2">
               <input
-                type="submit"
+                type="button"
                 value="📌"
                 className="form-control btn btn-outline-secondary CurrentLocation"
                 data-toggle="tooltip"
                 data-placement="bottom"
                 title="Search by current location"
+                onClick={handleCurrentLocation}
               ></input>
             </div>
           </div>
