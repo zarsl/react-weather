@@ -1,0 +1,7 @@
+.HourlyForecast {
+  text-align: center;
+}
+.HourlyForecast img {
+  display: block;
+  margin: 0px auto;
+}
