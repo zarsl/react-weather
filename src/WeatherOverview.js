@@ -1,5 +1,6 @@
 import FormatDate from "./FormatDate";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherOverview(props) {
   return (
@@ -19,10 +20,7 @@ export default function WeatherOverview(props) {
                 icon={props.data.icon}
                 description={props.data.description}
               />
-              <span className="temperature">
-                {Math.round(props.data.temperature)}
-              </span>
-              <span className="unit">°C</span>
+              <WeatherTemperature celsius={props.data.temperature} />
             </div>
           </div>
         </div>
