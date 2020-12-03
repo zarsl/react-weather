@@ -23,6 +23,7 @@
   height: 64px;
   width: 64px;
   margin-right: 10px;
+  vertical-align: bottom;
 }
 
 .WeatherOverview .UpperSection {
@@ -33,12 +34,16 @@
 
 .WeatherOverview .HourlyForecastSection {
   white-space: nowrap;
-  width: 430px;
+  width: 410px;
   margin: 0 auto;
-  padding: 5px 15px 5px 15px;
   background-color: white;
   border-radius: 10px;
+  padding: 30px 0;
 }
+.WeatherOverview .WeatherIcon {
+  width: 80px;
+}
+
 .WeatherOverview .WeatherTemperature {
   width: 80px;
 }
@@ -56,5 +61,5 @@
 }
 
 .WeatherOverview .LastUpdate {
-  left: 30px;
+  font-size: 10px;
 }

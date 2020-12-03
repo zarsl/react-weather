@@ -1,8 +1,9 @@
 import FormatDate from "./FormatDate";
+import FormatTime from "./FormatTime";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
 import HourlyForecast from "./HourlyForecast";
-
+import HourConversion from "./HourConversion";
 import "./WeatherOverview.css";
 
 export default function WeatherOverview(props) {
@@ -13,7 +14,8 @@ export default function WeatherOverview(props) {
         <ul>
           <li>
             <span className="LocalTime">Local Time: </span>{" "}
-            <FormatDate date={props.data.date} />
+            <FormatDate date={props.data.date} />{" "}
+            <FormatTime date={props.data.date} />
           </li>
           <li className="text-capitalize">{props.data.description}</li>
         </ul>
@@ -36,9 +38,15 @@ export default function WeatherOverview(props) {
       <div className="HourlyForecastSection">
         <HourlyForecast city={props.data.city} />
       </div>
-      <footer className="LastUpdate">
-        Last Updated: <FormatDate date={props.data.date} />
-      </footer>
+      <div className="row">
+        <div className="col-6">
+          <HourConversion />
+        </div>
+        <div className="LastUpdate col-6">
+          Last Updated: <FormatDate date={props.data.date} />{" "}
+          <FormatTime date={props.data.date} />
+        </div>
+      </div>
     </div>
   );
 }

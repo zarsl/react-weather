@@ -1,5 +1,7 @@
 import WeatherIcon from "./WeatherIcon";
 
+import "./HourlyPreview.css";
+
 export default function HourlyPreview(props) {
   function hours() {
     let date = new Date(props.data.dt * 1000);
@@ -15,7 +17,9 @@ export default function HourlyPreview(props) {
   return (
     <div className="HourlyPreview">
       {hours()}
-      <WeatherIcon icon={props.data.weather[0].icon} />
+      <div>
+        <WeatherIcon icon={props.data.weather[0].icon} />
+      </div>
       {temperature()}
     </div>
   );
