@@ -1,4 +1,3 @@
-// import React, { useState } from "react";
 import { useWeatherUnit } from "./context/WeatherUnitContext";
 
 export default function WeatherTemperature(props) {

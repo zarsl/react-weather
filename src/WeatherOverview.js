@@ -4,6 +4,7 @@ import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
 import HourlyForecast from "./HourlyForecast";
 import WeatherUnit from "./WeatherUnit";
+import TimeUnit from "./TimeUnit";
 import "./WeatherOverview.css";
 
 export default function WeatherOverview(props) {
@@ -16,6 +17,7 @@ export default function WeatherOverview(props) {
             <span className="LocalTime">Local Time: </span>{" "}
             <FormatDate date={props.data.date} />{" "}
             <FormatTime date={props.data.date} />
+            <TimeUnit />
           </li>
           <li className="text-capitalize">{props.data.description}</li>
         </ul>
