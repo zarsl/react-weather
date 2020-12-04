@@ -3,7 +3,7 @@ import FormatTime from "./FormatTime";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
 import HourlyForecast from "./HourlyForecast";
-import HourConversion from "./HourConversion";
+import WeatherUnit from "./WeatherUnit";
 import "./WeatherOverview.css";
 
 export default function WeatherOverview(props) {
@@ -26,6 +26,7 @@ export default function WeatherOverview(props) {
               description={props.data.description}
             />
             <WeatherTemperature celsius={props.data.temperature} />
+            <WeatherUnit />
           </div>
           <div className="col-5">
             <ul>
@@ -39,9 +40,7 @@ export default function WeatherOverview(props) {
         <HourlyForecast city={props.data.city} />
       </div>
       <div className="row">
-        <div className="col-6">
-          <HourConversion />
-        </div>
+        <div className="col-6"></div>
         <div className="LastUpdate col-6">
           Last Updated: <FormatDate date={props.data.date} />{" "}
           <FormatTime date={props.data.date} />

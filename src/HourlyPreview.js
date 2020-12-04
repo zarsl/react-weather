@@ -1,4 +1,5 @@
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 import "./HourlyPreview.css";
 
@@ -9,10 +10,10 @@ export default function HourlyPreview(props) {
     return `${hours}:00`;
   }
 
-  function temperature() {
-    let temperature = Math.round(props.data.main.temp);
-    return `${temperature}°C`;
-  }
+  // function temperature() {
+  //   let temperature = Math.round(props.data.main.temp);
+  //   return `${temperature}°C`;
+  // }
 
   return (
     <div className="HourlyPreview">
@@ -20,7 +21,7 @@ export default function HourlyPreview(props) {
       <div>
         <WeatherIcon icon={props.data.weather[0].icon} />
       </div>
-      {temperature()}
+      <WeatherTemperature celsius={props.data.main.temp} />
     </div>
   );
 }
