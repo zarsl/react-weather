@@ -3,6 +3,7 @@ import FormatTime from "./FormatTime";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
 import HourlyForecast from "./HourlyForecast";
+import WeeklyForecast from "./WeeklyForecast";
 import WeatherUnit from "./WeatherUnit";
 import TimeUnit from "./TimeUnit";
 import "./styles/WeatherOverview.css";
@@ -10,7 +11,8 @@ import "./styles/WeatherOverview.css";
 export default function WeatherOverview(props) {
   return (
     <div className="WeatherOverview">
-      <div clasName="SummarySection">
+      <div className="">
+        {/* Fix className summary section */}
         <h1>{props.data.city}</h1>
         <ul>
           <li>
@@ -44,6 +46,9 @@ export default function WeatherOverview(props) {
       </div>
       <div className="HourlyForecastSection">
         <HourlyForecast city={props.data.city} />
+      </div>
+      <div className="WeeklyForecastSection">
+        <WeeklyForecast city={props.data.city} />
       </div>
       <div className="row LowerSection">
         <div className="col-6">

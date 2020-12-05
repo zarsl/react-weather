@@ -1,0 +1,7 @@
+.WeeklyForecast {
+  width: 408px;
+  border: 1px solid rgb(186, 186, 186);
+  border-radius: 10px;
+  padding: 10px 5px 20px 15px;
+  background-color: white;
+}

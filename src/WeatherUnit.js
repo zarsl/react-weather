@@ -16,10 +16,9 @@ export default function WeatherUnit() {
     return (
       <span className="unit">
         <span>
-          <strong>°C</strong> |
+          <strong>°C</strong> |{"  "}
         </span>
         <a href="/" onClick={toggleWeather}>
-          {"  "}
           °F
         </a>
       </span>
@@ -28,10 +27,10 @@ export default function WeatherUnit() {
     return (
       <span className="unit">
         <a href="/" onClick={toggleWeather}>
-          °C{"  "}
+          °C
         </a>
         <span>
-          | <strong>°F</strong>
+          {"  "}| <strong>°F</strong>
         </span>
       </span>
     );

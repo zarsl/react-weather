@@ -1,0 +1,16 @@
+.WeeklyPreview {
+  text-align: center;
+  font-size: 12px;
+  margin: 0 auto;
+}
+
+.WeeklyPreview img {
+  height: 50px;
+  width: 50px;
+}
+
+.WeeklyPreview .temperature {
+  color: rgb(33, 33, 33);
+  font-size: 20px;
+  font-weight: 400;
+}
