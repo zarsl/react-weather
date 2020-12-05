@@ -14,7 +14,7 @@ export default function WeatherUnit() {
 
   if (metric) {
     return (
-      <span>
+      <span className="unit">
         <span>
           <strong>°C</strong> |
         </span>
@@ -26,7 +26,7 @@ export default function WeatherUnit() {
     );
   } else {
     return (
-      <span>
+      <span className="unit">
         <a href="/" onClick={toggleWeather}>
           °C{"  "}
         </a>

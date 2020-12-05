@@ -1,8 +1,6 @@
 .WeatherOverview h1 {
-  color: #7c7c7c;
   font-size: 24px;
   font-weight: 100;
-  line-height: 28px;
   margin-top: 25px;
 }
 
@@ -13,53 +11,46 @@
 
 .WeatherOverview li {
   list-style: none;
-  color: #7c7c7c;
-  font-size: 16px;
-  font-weight: 100;
   line-height: 19px;
 }
 
-.WeatherOverview img {
-  height: 64px;
-  width: 64px;
-  margin-right: 10px;
-  vertical-align: bottom;
-}
-
-.WeatherOverview .UpperSection {
-  display: block;
-  width: 400px;
-  padding-bottom: 10px;
+.WeatherOverview .SummarySection {
+  width: 200px;
+  margin: 0 auto;
+  background-color: white;
+  height: 120px;
+  padding: 10px 0;
 }
 
 .WeatherOverview .HourlyForecastSection {
-  white-space: nowrap;
-  width: 410px;
+  width: 350px;
   margin: 0 auto;
   background-color: white;
-  border-radius: 10px;
-  padding: 30px 0;
+  padding-top: 8px;
+  padding-bottom: 30px;
 }
-.WeatherOverview .WeatherIcon {
-  width: 80px;
+.WeatherOverview .MainIcon {
+  height: 64px;
+  width: 64px;
+  position: relative;
+  bottom: 12px;
 }
 
-.WeatherOverview .WeatherTemperature {
-  width: 80px;
-}
-
-.WeatherOverview .temperature {
-  color: rgb(33, 33, 33);
+.WeatherOverview .MainTemp {
   font-size: 64px;
-  font-weight: 400;
-  line-height: 1;
 }
+
 .WeatherOverview .unit {
   position: relative;
-  top: -34px;
+  top: -35px;
+  left: 5px;
   font-size: 18px;
 }
 
 .WeatherOverview .LastUpdate {
   font-size: 10px;
+}
+
+.WeatherOverview .LocalTime {
+  font-size: 14px;
 }

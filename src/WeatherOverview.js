@@ -10,23 +10,28 @@ import "./styles/WeatherOverview.css";
 export default function WeatherOverview(props) {
   return (
     <div className="WeatherOverview">
-      <div clasName="UpperSection">
+      <div clasName="SummarySection">
         <h1>{props.data.city}</h1>
         <ul>
           <li>
-            <span className="LocalTime">Local Time: </span>{" "}
-            <FormatDate date={props.data.date} />{" "}
-            <FormatTime date={props.data.date} />
+            <span className="LocalTime">
+              Local Time: <FormatDate date={props.data.date} />{" "}
+              <FormatTime date={props.data.date} />{" "}
+            </span>
           </li>
           <li className="text-capitalize">{props.data.description}</li>
         </ul>
-        <div className="row ">
+        <div className="row">
           <div className="col-7">
-            <WeatherIcon
-              icon={props.data.icon}
-              description={props.data.description}
-            />
-            <WeatherTemperature celsius={props.data.temperature} />
+            <span className="MainIcon">
+              <WeatherIcon
+                icon={props.data.icon}
+                description={props.data.description}
+              />
+            </span>
+            <span className="MainTemp">
+              <WeatherTemperature celsius={props.data.temperature} />
+            </span>
             <WeatherUnit />
           </div>
           <div className="col-5">
@@ -40,7 +45,7 @@ export default function WeatherOverview(props) {
       <div className="HourlyForecastSection">
         <HourlyForecast city={props.data.city} />
       </div>
-      <div className="row">
+      <div className="row LowerSection">
         <div className="col-6">
           <TimeUnit />
         </div>

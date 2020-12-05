@@ -10,7 +10,7 @@ export default function HourlyPreview(props) {
   return (
     <div className="HourlyPreview">
       <FormatTime date={date} />
-      <div>
+      <div className="HourlyIcon">
         <WeatherIcon icon={props.data.weather[0].icon} />
       </div>
       <WeatherTemperature celsius={props.data.main.temp} />
