@@ -1,10 +1,45 @@
-import { useTimeUnitUpdate } from "./context/TimeUnitContext";
+import { useTimeUnit, useTimeUnitUpdate } from "./context/TimeUnitContext";
 
 export default function TimeUnit() {
+  const twelveHr = useTimeUnit();
   const toggleTimeUnit = useTimeUnitUpdate();
-  return (
-    <div>
-      <button onClick={toggleTimeUnit}> Change Time Units </button>
-    </div>
-  );
+  function toggleTime(event) {
+    event.preventDefault();
+    toggleTimeUnit();
+  }
+  if (twelveHr) {
+    return (
+      <div>
+        <span>
+          <strong>12hr</strong> |
+        </span>
+        <a href="/" onClick={toggleTime}>
+          {" "}
+          24hr
+        </a>
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <a href="/" onClick={toggleTime}>
+          12hr{" "}
+        </a>
+        <span>
+          | <strong>24hr</strong>
+        </span>
+      </div>
+    );
+  }
 }
+
+//               <span>
+//                 <strong>12hr</strong>
+//               </span>
+//               <Toggle defaultChecked={false} onClick={toggleTimeUnit} icons={false} />
+//               <span>24Hr</span>
+// <span>12hr</span>
+// <Toggle defaultChecked={true} onClick={toggleTimeUnit} icons={false} />
+// <span>
+//   <strong>24Hr</strong>
+// </span>

@@ -5,7 +5,7 @@ import WeatherTemperature from "./WeatherTemperature";
 import HourlyForecast from "./HourlyForecast";
 import WeatherUnit from "./WeatherUnit";
 import TimeUnit from "./TimeUnit";
-import "./WeatherOverview.css";
+import "./styles/WeatherOverview.css";
 
 export default function WeatherOverview(props) {
   return (
@@ -17,7 +17,6 @@ export default function WeatherOverview(props) {
             <span className="LocalTime">Local Time: </span>{" "}
             <FormatDate date={props.data.date} />{" "}
             <FormatTime date={props.data.date} />
-            <TimeUnit />
           </li>
           <li className="text-capitalize">{props.data.description}</li>
         </ul>
@@ -42,7 +41,9 @@ export default function WeatherOverview(props) {
         <HourlyForecast city={props.data.city} />
       </div>
       <div className="row">
-        <div className="col-6"></div>
+        <div className="col-6">
+          <TimeUnit />
+        </div>
         <div className="LastUpdate col-6">
           Last Updated: <FormatDate date={props.data.date} />{" "}
           <FormatTime date={props.data.date} />

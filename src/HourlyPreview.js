@@ -2,7 +2,7 @@ import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
 import FormatTime from "./FormatTime";
 
-import "./HourlyPreview.css";
+import "./styles/HourlyPreview.css";
 
 export default function HourlyPreview(props) {
   const date = new Date(props.data.dt * 1000);

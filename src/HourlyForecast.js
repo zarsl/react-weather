@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import HourlyPreview from "./HourlyPreview";
-import "./HourlyForecast.css";
+import "./styles/HourlyForecast.css";
 
 export default function HourlyForecast(props) {
   const [loaded, setLoaded] = useState(false);

@@ -1,7 +1,7 @@
 import Weather from "./Weather";
-import "./App.css";
 import WeatherUnitProvider from "./context/WeatherUnitContext";
 import TimeUnitProvider from "./context/TimeUnitContext";
+import "./styles/App.css";
 
 export default function App() {
   return (
