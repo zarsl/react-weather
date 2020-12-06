@@ -15,42 +15,53 @@
 }
 
 .WeatherOverview .SummarySection {
-  width: 200px;
-  margin: 0 auto;
-  background-color: white;
-  height: 120px;
-  padding: 10px 0;
+  width: 400px;
+  margin: 24px;
+  margin-bottom: 12px;
 }
 
-.WeatherOverview .HourlyForecastSection {
-  width: 350px;
-  margin: 0 auto;
-  background-color: white;
-  padding-top: 8px;
-  padding-bottom: 30px;
+.WeatherOverview .SummarySection .col-5 {
+  padding-left: 0px;
 }
-.WeatherOverview .MainIcon {
-  height: 64px;
-  width: 64px;
+
+.WeatherOverview .SummarySection .MainIcon .icon {
+  height: 80px;
+  width: 80px;
   position: relative;
-  bottom: 12px;
+  bottom: 15px;
 }
-
 .WeatherOverview .MainTemp {
-  font-size: 64px;
+  font-size: 54px;
 }
-
 .WeatherOverview .unit {
   position: relative;
-  top: -35px;
+  top: -30px;
   left: 5px;
-  font-size: 18px;
+  font-size: 16px;
+  color: #7d7d7d;
+}
+.WeatherOverview .LocalTime {
+  font-size: 14px;
+}
+.WeatherOverview .HourlyForecastSection {
+  width: 325px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.WeatherOverview .LowerSection {
+  padding-top: 15px;
+}
+
+.WeatherOverview .LowerSection .TimeToggle {
+  font-size: 14px;
+  position: relative;
+  top: 10px;
 }
 
 .WeatherOverview .LastUpdate {
   font-size: 10px;
-}
-
-.WeatherOverview .LocalTime {
-  font-size: 14px;
+  position: relative;
+  top: 20px;
+  left: 55px;
 }

@@ -11,13 +11,14 @@ import "./styles/WeatherOverview.css";
 export default function WeatherOverview(props) {
   return (
     <div className="WeatherOverview">
-      <div className="">
-        {/* Fix className summary section */}
+      <div className="SummarySection">
         <h1>{props.data.city}</h1>
         <ul>
           <li>
+            Local Time:
             <span className="LocalTime">
-              Local Time: <FormatDate date={props.data.date} />{" "}
+              {" "}
+              <FormatDate date={props.data.date} />{" "}
               <FormatTime date={props.data.date} />{" "}
             </span>
           </li>
@@ -51,7 +52,7 @@ export default function WeatherOverview(props) {
         <WeeklyForecast city={props.data.city} />
       </div>
       <div className="row LowerSection">
-        <div className="col-6">
+        <div className="col-6 TimeToggle">
           <TimeUnit />
         </div>
         <div className="LastUpdate col-6">

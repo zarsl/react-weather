@@ -14,7 +14,7 @@ export default function WeeklyForecast(props) {
   if (loaded && props.city === forecast.city_name) {
     return (
       <div className="WeeklyForecast">
-        <p>Weekly Forecast</p>
+        <p className="WeeklyHeader">Weekly Forecast</p>
         <div className=" row">
           {forecast.data.slice(0, 7).map(function (forecastItem) {
             return <WeeklyPreview data={forecastItem} />;

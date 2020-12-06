@@ -10,9 +10,7 @@ export default function TimeUnit() {
   if (twelveHr) {
     return (
       <div>
-        <span>
-          <strong>12hr</strong> |
-        </span>
+        <span>12hr |</span>
         <a href="/" onClick={toggleTime}>
           {" "}
           24hr
@@ -25,9 +23,7 @@ export default function TimeUnit() {
         <a href="/" onClick={toggleTime}>
           12hr{" "}
         </a>
-        <span>
-          | <strong>24hr</strong>
-        </span>
+        <span>| 24hr</span>
       </div>
     );
   }

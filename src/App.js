@@ -2,15 +2,9 @@ import Weather from "./Weather";
 import WeatherUnitProvider from "./context/WeatherUnitContext";
 import TimeUnitProvider from "./context/TimeUnitContext";
 import "./styles/App.css";
-import { useTheme, useThemeUpdate } from "./context/ThemeContext";
 import ThemeProvider from "./context/ThemeContext";
-import Toggle from "react-toggle";
-import "react-toggle/style.css";
 
 export default function App() {
-  const lightTheme = useTheme();
-  const toggleTheme = useThemeUpdate();
-
   return (
     <div className="App">
       <div className="container">
@@ -29,11 +23,6 @@ export default function App() {
                   open-sourced on Github
                 </a>
               </footer>
-              <Toggle
-                checked={lightTheme}
-                icons={false}
-                onChange={toggleTheme}
-              />
             </TimeUnitProvider>
           </WeatherUnitProvider>
         </ThemeProvider>

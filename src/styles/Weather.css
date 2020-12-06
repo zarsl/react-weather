@@ -11,3 +11,43 @@
   color: #abacad;
   border-color: #abacad;
 }
+
+.Weather .SearchButton {
+  position: relative;
+  right: 15px;
+}
+
+.Weather .LocationButton {
+  position: relative;
+  right: 7px;
+}
+
+.Weather .ThemeButton {
+  position: relative;
+  right: 30px;
+  top: 5px;
+  font-size: 12px;
+}
+
+.Weather .react-toggle-track-x,
+.Weather .react-toggle-track-check {
+  top: 10px;
+}
+
+.Weather .react-toggle-track {
+  background-color: black;
+}
+
+.Weather .react-toggle--checked .react-toggle-track {
+  background-color: #c7c7c7;
+}
+
+.Weather .react-toggle--checked .react-toggle-thumb {
+  border-color: #c7c7c7;
+}
+
+.Weather
+  .react-toggle--checked:hover:not(.react-toggle--disabled)
+  .react-toggle-track {
+  background-color: #c7c7c7;
+}
