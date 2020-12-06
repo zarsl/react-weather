@@ -1,7 +1,8 @@
 .HourlyPreview {
   text-align: center;
-  font-size: 12px;
-  margin: 0 auto;
+  font-size: 13px;
+  margin: 0 5px;
+  color: rgb(186, 186, 186);
 }
 
 .HourlyPreview .icon {
@@ -9,8 +10,18 @@
   width: 50px;
 }
 
-.HourlyPreview .temperature {
+.HourlyPreview .MaxTemp {
+  color: rgb(135, 135, 135);
+  position: relative;
+  right: 3px;
+}
+.HourlyPreview .MinTemp {
+  position: relative;
+  left: 3px;
+}
+
+/* .HourlyPreview .temperature {
   color: rgb(33, 33, 33);
   font-size: 20px;
   font-weight: 400;
-}
+} */

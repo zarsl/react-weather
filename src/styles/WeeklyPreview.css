@@ -2,6 +2,7 @@
   text-align: center;
   font-size: 12px;
   margin: 0 auto;
+  color: rgb(186, 186, 186);
 }
 
 .WeeklyPreview .icon {
@@ -9,7 +10,13 @@
   width: 35px;
 }
 
-.WeeklyPreview .temperature {
-  font-size: 14px;
-  font-weight: 400;
+.WeeklyPreview .MaxTemp {
+  color: rgb(135, 135, 135);
+  position: relative;
+  left: 1px;
+}
+
+.WeeklyPreview .MinTemp {
+  position: relative;
+  left: 5px;
 }

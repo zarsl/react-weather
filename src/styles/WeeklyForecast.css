@@ -1,9 +1,13 @@
 .WeeklyForecast {
-  width: 390px;
+  width: 400px;
   border: 1px solid rgb(186, 186, 186);
   border-radius: 10px;
-  padding: 0px 10px 10px 10px;
+  padding: 0px 15px 10px 15px;
   margin: 0 auto;
+}
+
+.WeeklyForecast .row {
+  margin-top: -5px;
 }
 
 .WeeklyForecast .WeeklyHeader {

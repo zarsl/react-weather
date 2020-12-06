@@ -8,6 +8,7 @@ export default function HourlyForecast(props) {
   const [forecast, setForecast] = useState(null);
   function handleResponse(response) {
     setForecast(response.data);
+    console.log(response.data);
     setLoaded(true);
   }
 

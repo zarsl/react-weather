@@ -19,7 +19,13 @@ export default function WeeklyPreview(props) {
           alt={props.data.weather.description}
         ></img>
       </div>
-      <WeatherTemperature celsius={props.data.max_temp} />
+      <span className="MaxTemp">
+        <WeatherTemperature celsius={props.data.max_temp} />
+        {"°"}
+      </span>
+      <span className="MinTemp">
+        <WeatherTemperature celsius={props.data.min_temp} /> {"°"}
+      </span>
     </div>
   );
 }

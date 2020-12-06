@@ -13,7 +13,14 @@ export default function HourlyPreview(props) {
       <div className="HourlyIcon">
         <WeatherIcon icon={props.data.weather[0].icon} />
       </div>
-      <WeatherTemperature celsius={props.data.main.temp} />
+      <span className="MaxTemp">
+        <WeatherTemperature celsius={props.data.main.temp_max} />
+        {"°"}
+      </span>
+      <span className="MinTemp">
+        <WeatherTemperature celsius={props.data.main.temp_min} />
+        {"°"}
+      </span>
     </div>
   );
 }

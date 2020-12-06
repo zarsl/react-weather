@@ -44,9 +44,10 @@
   font-size: 14px;
 }
 .WeatherOverview .HourlyForecastSection {
-  width: 325px;
+  width: 355px;
   margin: 0 auto;
   padding-bottom: 30px;
+  padding-left: 9px;
 }
 
 .WeatherOverview .LowerSection {
