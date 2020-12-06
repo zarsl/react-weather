@@ -19,6 +19,7 @@ export default function ThemeProvider({ children }) {
   }
 
   return (
+    <ThemeContext.Provider value={lightTheme}>
       <ThemeUpdateContext.Provider value={toggleTheme}>
         {children}
       </ThemeUpdateContext.Provider>
