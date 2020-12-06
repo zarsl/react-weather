@@ -17,12 +17,13 @@ export default function WeatherIcon(props) {
     "13d": "s01d",
     "13n": "s01n",
     "50d": "a05d",
-    "51n": "a05n",
+    "50n": "a05n",
   };
 
-  let imgUrl = `https://www.weatherbit.io/static/img/icons/${
-    codeMapping[props.icon]
-  }.png`;
+  let code = null;
+  code = codeMapping[props.icon];
+
+  let imgUrl = `https://www.weatherbit.io/static/img/icons/${code}.png`;
 
   return (
     <span className="WeatherIcon">
