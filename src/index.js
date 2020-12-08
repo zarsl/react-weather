@@ -4,10 +4,13 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./styles/index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import ThemeProvider from "./context/ThemeContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

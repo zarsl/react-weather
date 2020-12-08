@@ -12,9 +12,11 @@ export default function Weather(props) {
   const apiKey = "4fb8f394cc5f2d439df6249cf258d6a4";
   let apiUrl = null;
   let units = "metric";
-  const lightTheme = useTheme();
+  const darkTheme = useTheme();
   const toggleTheme = useThemeUpdate();
-
+  const themeStyles = {
+    backgroundColor: darkTheme ? "#333" : "#CCC",
+  };
   function handleResponse(response) {
     setForecast({
       ready: true,
@@ -54,7 +56,7 @@ export default function Weather(props) {
 
   if (forecast.ready) {
     return (
-      <div className="Weather">
+      <div className="Weather" style={themeStyles}>
         <form onSubmit={handleSubmit}>
           <div className="row SearchBar">
             <div className="col-7 w-100">
@@ -93,7 +95,7 @@ export default function Weather(props) {
             <div className="col-1">
               <span className="ThemeButton">
                 <Toggle
-                  checked={lightTheme}
+                  checked={darkTheme}
                   icons={{ checked: "☀️", unchecked: "🌙" }}
                   onChange={toggleTheme}
                 />
