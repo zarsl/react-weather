@@ -35,11 +35,11 @@
 }
 
 .Weather .react-toggle-track {
-  background-color: black;
+  background-color: #c7c7c7;
 }
 
 .Weather .react-toggle--checked .react-toggle-track {
-  background-color: #c7c7c7;
+  background-color: black;
 }
 
 .Weather .react-toggle--checked .react-toggle-thumb {
@@ -49,5 +49,5 @@
 .Weather
   .react-toggle--checked:hover:not(.react-toggle--disabled)
   .react-toggle-track {
-  background-color: #c7c7c7;
+  background-color: black;
 }

@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeeklyPreview from "./WeeklyPreview";
+import { useTheme } from "./context/ThemeContext";
 import "./styles/WeeklyForecast.css";
 
 export default function WeeklyForecast(props) {
+  const darkTheme = useTheme();
+  const themeStyles = {
+    backgroundColor: darkTheme ? "#fcfcfc" : "#333",
+  };
   const [loaded, setLoaded] = useState(false);
   const [forecast, setForecast] = useState(null);
   function handleResponse(response) {
@@ -13,8 +18,10 @@ export default function WeeklyForecast(props) {
 
   if (loaded && props.city === forecast.city_name) {
     return (
-      <div className="WeeklyForecast">
-        <p className="WeeklyHeader">Weekly Forecast</p>
+      <div className="WeeklyForecast" style={themeStyles}>
+        <p className="WeeklyHeader" style={themeStyles}>
+          Weekly Forecast
+        </p>
         <div className=" row">
           {forecast.data.slice(0, 7).map(function (forecastItem) {
             return <WeeklyPreview data={forecastItem} />;

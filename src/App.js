@@ -6,7 +6,7 @@ import "./styles/App.css";
 export default function App() {
   return (
     <div className="App">
-      <div className="container">
+      <div className="container ">
         <WeatherUnitProvider>
           <TimeUnitProvider>
             <Weather defaultCity="New York" />

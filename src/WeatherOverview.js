@@ -6,9 +6,16 @@ import HourlyForecast from "./HourlyForecast";
 import WeeklyForecast from "./WeeklyForecast";
 import WeatherUnit from "./WeatherUnit";
 import TimeUnit from "./TimeUnit";
+import { useTheme } from "./context/ThemeContext";
+
 import "./styles/WeatherOverview.css";
 
 export default function WeatherOverview(props) {
+  const darkTheme = useTheme();
+  const themeStyles = {
+    color: darkTheme ? "#333" : "#fcfcfc",
+  };
+
   return (
     <div className="WeatherOverview">
       <div className="SummarySection">
@@ -32,7 +39,7 @@ export default function WeatherOverview(props) {
                 description={props.data.description}
               />
             </span>
-            <span className="MainTemp">
+            <span className="MainTemp" styles={themeStyles}>
               <WeatherTemperature celsius={props.data.temperature} />
             </span>
             <WeatherUnit />

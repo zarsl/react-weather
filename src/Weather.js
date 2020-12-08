@@ -15,8 +15,9 @@ export default function Weather(props) {
   const darkTheme = useTheme();
   const toggleTheme = useThemeUpdate();
   const themeStyles = {
-    backgroundColor: darkTheme ? "#333" : "#CCC",
+    backgroundColor: darkTheme ? "#fcfcfc" : "#333",
   };
+
   function handleResponse(response) {
     setForecast({
       ready: true,

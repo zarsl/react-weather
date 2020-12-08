@@ -32,7 +32,6 @@
 }
 .WeatherOverview .MainTemp {
   font-size: 54px;
-  color: rgb(33, 33, 33);
 }
 .WeatherOverview .unit {
   position: relative;
