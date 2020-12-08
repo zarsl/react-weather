@@ -22,12 +22,8 @@ export default function WeatherOverview(props) {
         <h1>{props.data.city}</h1>
         <ul>
           <li>
-            Local Time:
-            <span className="LocalTime">
-              {" "}
-              <FormatDate date={props.data.date} />{" "}
-              <FormatTime date={props.data.date} />{" "}
-            </span>
+            <FormatDate date={props.data.date} />{" "}
+            <FormatTime date={props.data.date} />{" "}
           </li>
           <li className="text-capitalize">{props.data.description}</li>
         </ul>
